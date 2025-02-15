@@ -17,6 +17,8 @@ const basicOp=(event) =>{ //srcElement innerText innerHTML
     if(!userop){
         fnums=dispEl.textContent;
     }
+
+
     if(event.target.classList.contains("number") && userop){
        if(f){
         dispEl.textContent="";
@@ -25,7 +27,7 @@ const basicOp=(event) =>{ //srcElement innerText innerHTML
 
     //    Snums=event.srcElement.innerText;
     //     dispEl.textContent=Snums;
-       Snums=dispEl.textContent;
+       Snums +=event.srcElement.innerText ;
        dispEl.textContent=Snums;
     }
 
@@ -38,7 +40,6 @@ const basicOp=(event) =>{ //srcElement innerText innerHTML
      dispEl.textContent="";
      dispEl.textContent=event.srcElement.innerText;
      op=dispEl.textContent;
-    //  fnums="";
      userop=true;
     }
 
@@ -49,10 +50,20 @@ const basicOp=(event) =>{ //srcElement innerText innerHTML
     }
 
     if(event.srcElement.innerText === "C"){
+        dispEl.textContent="";
         op="";
         fnums = "";
         Snums="";
+        userop = false;
+        f=true;
+        // i dont why in the first time i press it , its dont know it need me to dublicate the code
         dispEl.textContent="";
+        op="";
+        fnums = "";
+        Snums="";
+        userop = false;
+        f=true;
+        
     }
 
 }
