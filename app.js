@@ -157,11 +157,12 @@ const culc = (event)=>{
          currentValue="";
          operationDetected=false;
          result="";
-         display.textContent="";
+         display.textContent="0";
     }
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
 document.querySelectorAll(".button").forEach((button)=>{
-    button.addEventListener("click",culc)
+    button.addEventListener("click",culc);
+    display.textContent="0"; // make culc start by displacing 0
 })
