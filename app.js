@@ -114,7 +114,6 @@ let result;
 const display=document.querySelector(".display");
 /*-------------------------------- Functions --------------------------------*/
 const culc = (event)=>{
-    //console.log(event.srcElement.innerText)
 
     // two line of code will handel displacing user input to the culc display 
     currentValue+=event.srcElement.innerText;
